@@ -25,32 +25,26 @@
   */
 package us.illyohs.sinked.util
 
-import us.illyohs.sinked.api.channel.Channel
-import us.illyohs.sinked.api.event._
-
-import org.spongepowered.api.Sponge
-import org.spongepowered.api.entity.living.player.Player
-import org.spongepowered.api.text.Text
 
 object SinkedEventFactory {
 
-  def postChannelCreated(channel:Channel, player:Player): Unit = {
-    Sponge.getEventManager.post(new ChannelCreatedEvent(channel, player))
-  }
-
-  def postDeletedCreated(channel:Channel, player:Player): Unit = {
-    Sponge.getEventManager.post(new ChannelDeletedEvent(channel, player))
-  }
-
-  def postJoinChannel(channel:Channel, player:Player): Unit = {
-    Sponge.getEventManager.post(new ChannelJoinEvent(channel, player))
-  }
-
-  def postPartChannel(channel:Channel, player:Player): Unit = {
-    Sponge.getEventManager.post(new ChannelPartEvent(channel, player))
-  }
-
-  def postMessageCreated(channel:Channel, message:Text, src:Object): Unit = {
-    Sponge.getEventManager.post(new ChannelMessageEvent(channel, message, src))
-  }
+//  def postChannelCreated(channel:Channel, player:Player): Unit = {
+//    Sponge.getEventManager.post(new ChannelCreatedEvent(channel, player))
+//  }
+//
+//  def postDeletedCreated(channel:Channel, player:Player): Unit = {
+//    Sponge.getEventManager.post(new ChannelDeletedEvent(channel, player))
+//  }
+//
+//  def postJoinChannel(channel:Channel, player:Player): Unit = {
+//    Sponge.getEventManager.post(new ChannelJoinEvent(channel, player))
+//  }
+//
+//  def postPartChannel(channel:Channel, player:Player): Unit = {
+//    Sponge.getEventManager.post(new ChannelPartEvent(channel, player))
+//  }
+//
+//  def postMessageCreated(channel:Channel, message:Text, src:Object): Unit = {
+//    Sponge.getEventManager.post(new ChannelMessageEvent(channel, message, src))
+//  }
 }

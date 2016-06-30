@@ -28,7 +28,7 @@ package us.illyohs.sinked.handler
 import org.spongepowered.api.event.Listener
 import org.spongepowered.api.event.message.MessageChannelEvent
 
-object ChatHandler {
+object ChatEventHandler {
 
   @Listener
   def messageChannelEvent(e:MessageChannelEvent): Unit = {

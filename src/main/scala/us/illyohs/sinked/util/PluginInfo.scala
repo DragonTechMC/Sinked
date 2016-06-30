@@ -25,11 +25,10 @@
   */
 package us.illyohs.sinked.util
 
-import us.illyohs.sinked.api.SinkedApi
-
 object PluginInfo {
 
-  final val NAME        = SinkedApi.SINKED_PLUGIN_ID
+  final val ID          = NAME.toLowerCase
+  final val NAME        = "Sinked"
   final val VERSION     = "1.0.0"
   final val DESCRIPTION = "Networked chat"
   final val AUTHORS     = Array("Anthony Anderson(Illyohs)")

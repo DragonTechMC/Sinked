@@ -30,18 +30,33 @@ import us.illyohs.sinked.api.SinkedApi
 import us.illyohs.sinked.api.channel.Channel
 import us.illyohs.sinked.util.PluginInfo._
 
+import com.google.inject.Inject
+import ninja.leaping.configurate.ConfigurationOptions
+import ninja.leaping.configurate.commented.CommentedConfigurationNode
+import ninja.leaping.configurate.loader.ConfigurationLoader
+import ninja.leaping.configurate.objectmapping.GuiceObjectMapperFactory
+import org.slf4j.Logger
 import org.spongepowered.api.event.Listener
 import org.spongepowered.api.event.game.state._
 import org.spongepowered.api.plugin.Plugin
 
 @Plugin(
-  id = NAME,
+  id = ID,
   name = NAME,
   version = VERSION,
   description = DESCRIPTION,
   authors = AUTHORS
 )
 object Sinked {
+
+  @Inject
+  private val logger: Logger = null
+
+  @Inject
+  private val factory: GuiceObjectMapperFactory = null
+
+  @Inject
+  private val loader: ConfigurationLoader[CommentedConfigurationNode] = null
 
   @Listener
   def serverStarting(e:GameStartingServerEvent): Unit = {
@@ -55,6 +70,7 @@ object Sinked {
 
   @Listener
   def preInit(e:GamePreInitializationEvent): Unit = {
+    val node:CommentedConfigurationNode = loader.load(ConfigurationOptions.defaults().setObjectMapperFactory(factory))
 
   }
 
@@ -69,10 +85,10 @@ object Sinked {
   }
 
   private def initAPI: Unit = {
-    SinkedApi.getApi.registerChannel(new GlobalChannel)
-    SinkedApi.getApi.registerChannel(new LocalChannel)
+
+
   }
+
+  def getLogger: Logger = this.logger
 }
 
-case class GlobalChannel extends Channel("Global", "", "G", "", "", false, false, true)
-case class LocalChannel extends Channel("Global", "", "G", "", "", false, false, false)
