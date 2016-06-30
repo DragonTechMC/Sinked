@@ -1,0 +1,23 @@
+plugins {
+    id 'scala'
+    id 'maven'
+    id 'org.spongepowered.plugin' version '0.6'
+}
+
+group 'us.illyohs.sinked'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'sponge'
+        url = 'http://repo.spongepowered.org/maven'
+    }
+}
+
+dependencies {
+    compile 'org.spongepowered:spongeapi:4.1.0'
+    compile 'org.scala-lang:scala-library:2.11.1'
+    compile 'com.typesafe.akka:akka-cluster_2.11:2.4.7'
+
+}
