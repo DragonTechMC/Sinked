@@ -98,9 +98,8 @@ class Sinked {
     for (i <- 0 to 1){
       val ch = chanList.get(i)
       val json = gson.toJson(ch)
-
+      val w:Writer = new FileWriter("./channels/" + ch.getName + ".josn")
       try {
-        val w:Writer = new FileWriter("./channels/" + ch.getName + ".josn")
         w.write(json)
         w.close()
       } catch {
@@ -116,4 +115,4 @@ class Sinked {
 }
 
 case class GlobalChannel() extends Channel("Global", "", "G", "", "",true, false, false, true)
-case class LocalChannel() extends Channel("Global", "", "L", "", "", true, false, false, false)
+case class LocalChannel() extends Channel("Local", "", "L", "", "", true, false, false, false)
