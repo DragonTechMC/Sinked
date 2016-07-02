@@ -23,13 +23,28 @@
   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   */
-package us.illyohs.sinked.util
+package us.illyohs.sinked.helper
 
-object PluginInfo {
 
-  final val ID          = NAME.toLowerCase
-  final val NAME        = "Sinked"
-  final val VERSION     = "1.0.0"
-  final val DESCRIPTION = "Networked chat"
-  final val AUTHORS     = Array("Anthony Anderson(Illyohs)")
+object SinkedEventFactory {
+
+//  def postChannelCreated(channel:Channel, player:Player): Unit = {
+//    Sponge.getEventManager.post(new ChannelCreatedEvent(channel, player))
+//  }
+//
+//  def postDeletedCreated(channel:Channel, player:Player): Unit = {
+//    Sponge.getEventManager.post(new ChannelDeletedEvent(channel, player))
+//  }
+//
+//  def postJoinChannel(channel:Channel, player:Player): Unit = {
+//    Sponge.getEventManager.post(new ChannelJoinEvent(channel, player))
+//  }
+//
+//  def postPartChannel(channel:Channel, player:Player): Unit = {
+//    Sponge.getEventManager.post(new ChannelPartEvent(channel, player))
+//  }
+//
+//  def postMessageCreated(channel:Channel, message:Text, src:Object): Unit = {
+//    Sponge.getEventManager.post(new ChannelMessageEvent(channel, message, src))
+//  }
 }

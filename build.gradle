@@ -1,14 +1,24 @@
 plugins {
     id 'scala'
     id 'maven'
+    id "com.qixalite.spongestart" version "1.4.7"
     id 'org.spongepowered.plugin' version '0.6'
 }
 
 group 'us.illyohs.sinked'
 version '1.0-SNAPSHOT'
 
+spongestart{
+    eula true
+
+    //optional configs
+    spongeVanillaBuild 'LATEST'
+    spongeForgeBuild 'LATEST'
+}
+
 repositories {
     mavenCentral()
+    jcenter()
     maven {
         name = 'sponge'
         url = 'http://repo.spongepowered.org/maven'

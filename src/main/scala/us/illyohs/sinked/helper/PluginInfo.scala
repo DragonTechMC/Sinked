@@ -23,15 +23,12 @@
   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   */
-package us.illyohs.sinked.handler
+package us.illyohs.sinked.helper
 
-import org.spongepowered.api.event.Listener
-import org.spongepowered.api.event.message.MessageChannelEvent
+object PluginInfo {
 
-object ChatEventHandler {
-
-  @Listener
-  def messageChannelEvent(e:MessageChannelEvent): Unit = {
-
-  }
+  final val ID          = "sinked"
+  final val NAME        = "Sinked"
+  final val VERSION     = "1.0.0"
+  final val DESCRIPTION = "Networked chat"
 }

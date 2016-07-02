@@ -23,28 +23,16 @@
   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   */
-package us.illyohs.sinked.util
+package us.illyohs.sinked.commads
 
+import org.spongepowered.api.command.{CommandException, CommandResult, CommandSource}
+import org.spongepowered.api.command.args.CommandContext
+import org.spongepowered.api.command.spec.CommandExecutor
 
-object SinkedEventFactory {
+object SimkedCMD extends CommandExecutor{
 
-//  def postChannelCreated(channel:Channel, player:Player): Unit = {
-//    Sponge.getEventManager.post(new ChannelCreatedEvent(channel, player))
-//  }
-//
-//  def postDeletedCreated(channel:Channel, player:Player): Unit = {
-//    Sponge.getEventManager.post(new ChannelDeletedEvent(channel, player))
-//  }
-//
-//  def postJoinChannel(channel:Channel, player:Player): Unit = {
-//    Sponge.getEventManager.post(new ChannelJoinEvent(channel, player))
-//  }
-//
-//  def postPartChannel(channel:Channel, player:Player): Unit = {
-//    Sponge.getEventManager.post(new ChannelPartEvent(channel, player))
-//  }
-//
-//  def postMessageCreated(channel:Channel, message:Text, src:Object): Unit = {
-//    Sponge.getEventManager.post(new ChannelMessageEvent(channel, message, src))
-//  }
+  @throws[CommandException]
+  override def execute(src: CommandSource, args: CommandContext): CommandResult = {
+    CommandResult.success()
+  }
 }
