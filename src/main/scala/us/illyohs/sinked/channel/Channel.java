@@ -26,6 +26,7 @@
 package us.illyohs.sinked.channel;
 
 import javax.annotation.Nonnull;
+import java.util.List;
 
 public class Channel
 {
@@ -36,11 +37,13 @@ public class Channel
     String  password;
     boolean isEnabled;
     boolean hasOwner;
+    boolean isHidden;
     boolean hasPassword;
     boolean isNetworked;
+    List<String> invtedUsers;
 
     public Channel(@Nonnull String name, @Nonnull String owner, @Nonnull String prefix, @Nonnull String suffix,
-                   @Nonnull String password, @Nonnull boolean hasOwner, @Nonnull boolean isEnabled, 
+                   @Nonnull String password, @Nonnull boolean hasOwner, @Nonnull boolean isEnabled, @Nonnull boolean isHidden,
                    @Nonnull boolean hasPassword, @Nonnull boolean isNetworked)
     {
         this.name = name;
@@ -52,6 +55,7 @@ public class Channel
         this.hasOwner = hasOwner;
         this.hasPassword = hasPassword;
         this.isNetworked = isNetworked;
+        this.isHidden = isHidden;
     }
 
     public String getName()
@@ -98,4 +102,10 @@ public class Channel
     {
         return hasPassword;
     }
+
+    public boolean isHidden()
+    {
+        return isHidden;
+    }
+
 }
